@@ -8,16 +8,14 @@ const App: React.FC = () => {
 
   const onInputForm = (e: any) => {
     setInput(e.target.value)
-    console.log('input:', input)
   }
 
-  const onAddItem = (event: any) => {
+  const onAddItem = async (event: any) => {
     event.preventDefault()
-    const newInput = input.split(' ')
-    console.log('newInput:', newInput)
+    const newInput = input.split(/[\s,]+/)
     const newItems: Array<any> = [...items, ...newInput]
-    setItems(Object.values(newItems))
-    console.log('newItems:', newItems)
+    await setItems(newItems.filter((item: string) => item !== ''))
+    console.log('items:', items)
     setInput('')
   }
 
