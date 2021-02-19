@@ -15,7 +15,6 @@ const App: React.FC = () => {
     const newInput = input.split(/[\s,]+/)
     const newItems: Array<any> = [...items, ...newInput]
     await setItems(newItems.filter((item: string) => item !== ''))
-    console.log('items:', items)
     setInput('')
   }
 
