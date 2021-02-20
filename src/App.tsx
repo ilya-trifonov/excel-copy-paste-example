@@ -12,7 +12,7 @@ const App: React.FC = () => {
 
   const onAddItem = async (event: any) => {
     event.preventDefault()
-    const newInput = input.split(/[\s,]+/)
+    const newInput = input.split(/(?<!ООО|АО|ФЛП|ооо|ао|флп)[\s,]+/)
     const newItems: Array<any> = [...items, ...newInput]
     await setItems(newItems.filter((item: string) => item !== ''))
     setInput('')
