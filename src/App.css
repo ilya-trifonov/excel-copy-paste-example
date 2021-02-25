@@ -3,24 +3,6 @@
   padding-top: 100px;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .item_badge {
   background-color: darkseagreen;
   padding: 3px 5px;
@@ -40,4 +22,28 @@
 .list_block {
   width: 400px;
   margin: auto;
+}
+
+.toggle_link {
+  cursor: pointer;
+  font-size: 12px;
+  color: dodgerblue;
+}
+
+textarea {
+  height: 200px;
+}
+
+.list_title {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 12px;
 }
